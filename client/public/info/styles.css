@@ -1,0 +1,123 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    padding: 40px;
+  }
+  
+  .tab-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #004d80;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .tab-link {
+    background-color: transparent;
+    color: white;
+    padding: 20px 30px;
+    border: none;
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .tab-link:hover {
+    background-color: #006699;
+  }
+  
+  .tab-link.active {
+    background-color: #0080ff;
+    border-bottom: 3px solid white;
+    color: #fff;
+  }
+  
+  /* Tab Content Container */
+  .tab-content {
+    padding: 30px;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .tab-panel {
+    display: none;
+  }
+  
+  .tab-panel.active {
+    display: block;
+  }
+  
+  /* Year-specific styles */
+  #year2023 {
+    background-color: #e6f7ff;
+    border-left: 8px solid #0080ff;
+    border-radius: 10px;
+  }
+  
+  #year2022 {
+    background-color: #fff7e6;
+    border-left: 8px solid #ffcc00;
+    border-radius: 10px;
+  }
+  
+  #year2021 {
+    background-color: #f9f2f4;
+    border-left: 8px solid #ff4d4d;
+    border-radius: 10px;
+  }
+  
+  .tab-panel h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ddd;
+    padding-bottom: 15px;
+  }
+  
+  .tab-panel ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  /* Apply Staggered Fade-Up Effect */
+  .tab-panel li {
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    color: #444;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .tab-panel.active li {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+  }
+  
+  .tab-panel li:nth-child(1) { transition-delay: 0.2s; }
+  .tab-panel li:nth-child(2) { transition-delay: 0.4s; }
+  .tab-panel li:nth-child(3) { transition-delay: 0.6s; }
+  .tab-panel li:nth-child(4) { transition-delay: 0.8s; }
+  .tab-panel li:nth-child(5) { transition-delay: 1s; }
+  .tab-panel li:nth-child(6) { transition-delay: 1.2s; }
+  .tab-panel li:nth-child(7) { transition-delay: 1.4s; }
+  .tab-panel li:nth-child(8) { transition-delay: 1.6s; }
+  .tab-panel li:nth-child(9) { transition-delay: 1.8s; }
+  .tab-panel li:nth-child(10) { transition-delay: 2s; }
